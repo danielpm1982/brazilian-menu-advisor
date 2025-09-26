@@ -63,7 +63,7 @@ public class MealMenuItemDB {
                         Pavê is a Brazilian layered dessert made with biscuits soaked in coffee or chocolate syrup, alternating with creamy fillings like chocolate or vanilla. It's typically chilled and topped with chocolate shavings or nuts, making it a popular treat for celebrations and gatherings !
                         """, BigDecimal.valueOf(11.5), BigDecimal.valueOf(11.5 * (1 - DISCOUNT)).setScale(2, RoundingMode.HALF_UP))
         ));
-        Map<MealType, List<MealMenuItem>> mealMenuItemsMap = new HashMap<>();
+        Map<MealType, List<MealMenuItem>> mealMenuItemsMap = new LinkedHashMap<>();
         mealMenuItemsMap.put(MealType.APPETIZER, mealMenuItemsAppetizerList);
         mealMenuItemsMap.put(MealType.PRINCIPAL_DISH, mealMenuItemsPrincipalDishList);
         mealMenuItemsMap.put(MealType.SIDE_DISH, mealMenuItemsSideDishList);
